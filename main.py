@@ -5,9 +5,8 @@ from flask_wtf import FlaskForm
 from sqlalchemy.orm import relationship
 from wtforms import StringField, SubmitField
 from wtforms.validators import DataRequired
-from dotenv import load_dotenv
 
-load_dotenv()
+
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = '8BYkEfBA6O6donzWlSihBXox7C0sKR6'
@@ -143,4 +142,4 @@ def delete_column(column_id):
 
 
 if __name__ == '__main__':
-    app.run(debug=True, port=5001)
+    app.run(port=5001)
